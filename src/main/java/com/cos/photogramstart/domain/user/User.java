@@ -9,10 +9,12 @@ import javax.persistence.Id;
 import javax.persistence.PrePersist;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 //jpa , 즉 자바로 데이터를 영구적으로 저장(db)할수있는 api를 제공
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -26,6 +28,7 @@ public class User {
 	private String name;
 	private String website;
 	private String bio;//자기소개
+	private String email;
 	private String phone;
 	private String gender;
 	private String profileImageUrl;//작성자 사진
