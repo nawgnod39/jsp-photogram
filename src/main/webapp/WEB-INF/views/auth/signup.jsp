@@ -26,6 +26,7 @@
                          <!--로고end-->
                          
                          <!--회원가입 인풋-->
+                         <!--action 어디로  , method 어떻게 -->
                         <form class="login__input"  action ="/auth/signup" method="post">
                             <input type="text" name="username" placeholder="유저네임" required="required" />
                             <input type="password" name="password" placeholder="패스워드" required="required" />

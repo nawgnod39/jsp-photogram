@@ -21,7 +21,7 @@ import lombok.NoArgsConstructor;
 @Entity//DB에 테이블을 생성해줌 
 public class User {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)//번호증가전략이 데이터베이스를 따라감.ㅋㅇ
+	@GeneratedValue(strategy = GenerationType.IDENTITY)//번호증가전략이 데이터베이스를 따라감. 마이에스큐엘은 오토인크리먼트 전략을 씀 
 	private int id;
 	private String username;
 	private String password;

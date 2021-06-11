@@ -18,7 +18,7 @@ public class SignupDto {//req 하기위한 class , 통신을위한 데이터를 
 //이걸 authcontroller 에서 받아옴 
 	
 	
-	public User toEntity() {
+	public User toEntity() {//user에담기 좋은 방법은 함수를 만들기. 
 		return User.builder()
 				.username(username)
 				.password(password)
