@@ -16,7 +16,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 	@Bean
 	public BCryptPasswordEncoder encode() {
-		return new BCryptPasswordEncoder();
+		return new BCryptPasswordEncoder();//di해서 사용만하면됨. AuthService 에서 사용
 	}
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {

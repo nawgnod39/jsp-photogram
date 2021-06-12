@@ -2,6 +2,7 @@ package com.cos.photogramstart.domain.user;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,11 +24,16 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)//번호증가전략이 데이터베이스를 따라감. 마이에스큐엘은 오토인크리먼트 전략을 씀 
 	private int id;
+	
+	@Column(length = 20 , unique = true)//아이디 중복 방지를 위함.
 	private String username;
+	@Column(nullable = false)//null 불가능  
 	private String password;
+	@Column(nullable = false)//null 불가능  
 	private String name;
 	private String website;
 	private String bio;//자기소개
+	@Column(nullable = false)//null 불가능  
 	private String email;
 	private String phone;
 	private String gender;
